@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap');
+
+$primay-light-color: #90afc5;
+$primay-dark-color: #336B87;
+$accent-dark-color: #2a3132;
+$accent-red-color: #763626;
+
+body {
+  font-family: 'Quantico', sans-serif;
+  background-color: $primay-light-color;
+  font-size: 20px;
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  background-color: $primay-dark-color;
+  border-radius: 20px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__display {
+    font-style: italic;
+    font-size: 22px;
+    background-color: $accent-dark-color;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px;
+  }
+
+  &__name {
+    color: $accent-red-color;
+  }
+
+  &__left {
+    color: $primay-light-color;
+  }
+
+  &__interval {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+  }
+
+  &__interval-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__length {
+    text-align: center;
+    width: 26px;
+  }
+
+  &__time-controls {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 10px;
+  }
+
+  &__start-controls {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $primay-light-color;
+    border: none;
+  
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $accent-dark-color;
+      color: $primay-light-color;
+    }
+  }
+}
